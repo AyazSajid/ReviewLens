@@ -1,0 +1,11 @@
+langchain
+langchain-groq
+langchain-community
+langchainhub
+tavily-python
+streamlit
+python-dotenv
+pandas
+kaggle
+rich
+beautifulsoup4
