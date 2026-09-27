@@ -1,4 +1,4 @@
-# agents.py
+
 
 import os
 from langchain_groq import ChatGroq
@@ -13,13 +13,11 @@ load_dotenv()
 
 
 llm = ChatGroq(
-    model="llama-3.1-8b-instant",
+    model="openai/gpt-oss-20b",
     groq_api_key=os.getenv("GROQ_API_KEY")
 )
 
-# Automatic retry with exponential backoff on rate-limit / transient errors.
-# Applied AFTER the agent/chain is built (not on the raw llm), so that
-# bind_tools() still works correctly when creating agents.
+
 RETRY_KWARGS = dict(stop_after_attempt=6, wait_exponential_jitter=True)
 
 
